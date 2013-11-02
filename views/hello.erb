@@ -2,10 +2,12 @@
 <html>
   <head>
     <title>Hello world</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" media="all">
   </head>
   <body>
-    <% @names.each do |name| %>
-      <h1>Hello <%= name %>!</h1>
-    <% end %>
+    <p>Welcome to the pizza website<span class="bang normal">!</span></p>
+    <span class="name">Hello <%= @names[0] %><span class="bang">!</span></span>
+    <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Flickr_-_cyclonebill_-_Kartoffelpizza_med_rosmarinpesto.jpg/640px-Flickr_-_cyclonebill_-_Kartoffelpizza_med_rosmarinpesto.jpg"/>
+    <span class="name">Hello <%= @names[1] %><span class="bang">!</span></span>
   </body>
 </html>

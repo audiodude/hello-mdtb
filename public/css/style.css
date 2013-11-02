@@ -1,0 +1,22 @@
+html {
+ min-height: 100%; 
+}
+
+body {
+  min-height: 100%;
+}
+
+
+.name {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.bang {
+  color: red;
+  font-size: 32px;
+}
+
+.bang.normal {
+  color: black; 
+}
