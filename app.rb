@@ -3,7 +3,11 @@ require 'sinatra'
 # Change this method so that the server path is /hello and the
 # name of the ERB file being rendered is also called hello.
 get '/hello' do
-  @names = ['Matt', 'Travis']
+  if params[:name]
+    @name = params[:name]
+  else
+    @name = "Someone"
+  end
   erb :hello
 end
 
