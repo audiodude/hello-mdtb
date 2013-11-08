@@ -5,8 +5,10 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css" media="all">
   </head>
   <body>
-    <p>Welcome to the pizza website<span class="bang normal">!</span></p>
-    <span class="name">Hello <%= @name %><span class="bang">!</span></span>
-    <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Flickr_-_cyclonebill_-_Kartoffelpizza_med_rosmarinpesto.jpg/640px-Flickr_-_cyclonebill_-_Kartoffelpizza_med_rosmarinpesto.jpg"/>
+      <span class="fname"><%= @fname %></span>
+   	<br>
+      <span class="city"><%= @city %>,</span>
+   	<span class="state"><%= @state %></span>
+	<p><%= @failure %></p>
   </body>
 </html>
