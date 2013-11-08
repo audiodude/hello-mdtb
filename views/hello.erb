@@ -5,10 +5,14 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css" media="all">
   </head>
   <body>
-      <span class="fname"><%= @fname %></span>
-   	<br>
-      <span class="city"><%= @city %>,</span>
-   	<span class="state"><%= @state %></span>
-	<p><%= @failure %></p>
+    <% if !@failure %>
+    <p>
+      <h1>Hello</h1>
+      <%= @fname %> <%= @lname %><br>
+      <span class="city"><%= @city %>,</span> <span class="state"><%= @state %></span>
+    </p>
+    <% else %>
+	    <p><%= @failure %></p>
+    <% end %>
   </body>
 </html>
