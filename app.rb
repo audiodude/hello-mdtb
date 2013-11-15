@@ -1,4 +1,5 @@
 require 'sinatra'
+require_relative 'taxes'
 
 # Change this method so that the server path is /hello and the
 # name of the ERB file being rendered is also called hello.
