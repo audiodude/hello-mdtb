@@ -17,7 +17,11 @@ get '/hello' do
     @state = "CA"
   end
     
-  erb :hello
+    erb :hello
+end
+
+get '/taxes' do
+    erb :taxes
 end
 
 
