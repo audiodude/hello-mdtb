@@ -4,19 +4,14 @@ require_relative 'taxes'
 # Change this method so that the server path is /hello and the
 # name of the ERB file being rendered is also called hello.
 get '/hello' do
-  if params[:fname] && params[:city] && params[:lname]
-    @city = params[:city]
-    @fname = params[:fname]
-    @lname = params[:lname]
+  if params[:fname] && params[:city] && params[:lname] && [:state]
+      @city = params[:city]
+      @fname = params[:fname]
+      @lname = params[:lname]
+      @state = params[:state]
   else
-    @failure = "Oops that's an error"
+      @failure = "Oops that's an error"
   end    
-  
-  if params[:state]
-    @state = params[:state]
-  else
-    @state = "CA"
-  end
     
     erb :hello
 end

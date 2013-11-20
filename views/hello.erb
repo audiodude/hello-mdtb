@@ -5,14 +5,27 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css" media="all">
   </head>
   <body>
-    <% if !@failure %>
-    <p>
-      <h1>Hello</h1>
-      <%= @fname %> <%= @lname %><br>
-      <span class="city"><%= @city %>,</span> <span class="state"><%= @state %></span>
-    </p>
-    <% else %>
-	    <p><%= @failure %></p>
-    <% end %>
+    <form>
+      <b>First name:</b> <input type="text" name="fname"/><br>
+      <b>Last name:</b> <input type="text" name="lname"/><br>
+      <b>City:</b> <input type="text" name="city"/><br>
+      <b>State:</b>
+		<select name="state">
+	  	  	<option value="California">California</option>
+	  		<option value="Utah">Utah</option>
+	  		<option value="South Dakota">South Dakota</option>
+	  		<option value="Maryland">Maryland</option>
+		</select>
+	<br>
+      <input type="submit"/>
+      <% if !@failure %>
+      <p>
+        <%= @fname %> <%= @lname %><br>
+        <span class="city"><%= @city %>,</span> <span class="state"><%= @state %></span>
+      </p>
+      <% else %>
+  	    <p><%= @failure %></p>
+      <% end %>
+    </form>
   </body>
 </html>
