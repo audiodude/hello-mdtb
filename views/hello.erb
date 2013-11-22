@@ -5,27 +5,28 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css" media="all">
   </head>
   <body>
-    <form name="form">
-      <b>First name:</b> <input type="text" name="fname"/><br>
-      <b>Last name:</b> <input type="text" name="lname"/><br>
-      <b>City:</b> <input type="text" name="city"/><br>
-      <b>State:</b>
-		<select name="state">
-	  	  	<option value="California">California</option>
-	  		<option value="Utah">Utah</option>
-	  		<option value="South Dakota">South Dakota</option>
-	  		<option value="Maryland">Maryland</option>
-		</select>
-	<br>
-      <input type="submit"/>
-  </form>
-      <% if !@failure %>
-      <p>
-        <%= @fname %> <%= @lname %><br>
-        <span class="city"><%= @city %>,</span> <span class="state"><%= @state %></span>
-      </p>
+      <% if !@failure && !@is_launch %>
+        <p class="result">
+          <%= @fname %> <%= @lname %><br>
+          <span class="city"><%= @city %>,</span> <span class="state"><%= @state %></span>
+        </p>
       <% else %>
-  	    <p><%= @failure %></p>
+        <% if @failure %>
+          <p><%= @failure %></p>
+        <% end %>
+        <form>
+          <b>First name:</b> <input type="text" name="fname"/><br>
+          <b>Last name:</b> <input type="text" name="lname"/><br>
+          <b>City:</b> <input type="text" name="city"/><br>
+          <b>State:</b>
+		      <select name="state">
+	  	  	  <option value="California">California</option>
+	  		    <option value="Utah">Utah</option>
+	  		    <option value="South Dakota">South Dakota</option>
+	  		    <option value="Maryland">Maryland</option>
+		      </select><br>
+          <input type="submit"/>
+        </form>
       <% end %>
   </body>
 </html>
