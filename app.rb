@@ -12,7 +12,7 @@ get '/hello' do
   else
       @failure = "Oops that's an error"
   end    
-    
+ 
     erb :hello
 end
 
