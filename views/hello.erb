@@ -15,9 +15,9 @@
           <p><%= @failure %></p>
         <% end %>
         <form>
-          <b>First name:</b> <input type="text" name="fname"/><br>
-          <b>Last name:</b> <input type="text" name="lname"/><br>
-          <b>City:</b> <input type="text" name="city"/><br>
+          <b>First name:</b> <input type="text" name="fname" value="<%= @fname %>"/><br>
+          <b>Last name:</b> <input type="text" name="lname" value="<%= @lname %>"/><br>
+          <b>City:</b> <input type="text" name="city" value="<%= @city %>"/><br>
           <b>State:</b>
 		      <select name="state">
 	  	  	  <option value="California">California</option>
@@ -30,3 +30,4 @@
       <% end %>
   </body>
 </html>
+
